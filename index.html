@@ -46,25 +46,74 @@
         <a class="btn" href="quran.html">الذهاب إلى القرآن</a>
         <a class="btn btn-outline" href="articles.html">المقالات والأحاديث</a>
       </div>
+      <!-- قسم الرئيسية المتجدد -->
+<section id="home" class="home-section">
+  <div class="container">
+
+    <!-- Hero Section حديث -->
+    <div class="hero-modern">
+      <h1>الموعظة — نافذتك إلى الدين</h1>
+      <p>استكشف القرآن الكريم، الأحاديث، والمقالات الإسلامية بأسلوب عصري وجذاب.</p>
+      <a href="articles.html" class="btn">استكشف المقالات</a>
+    </div>
+
+    <!-- مقتطفات المقالات والأحاديث -->
+    <div class="cards">
+      <div class="card">
+        <img src="images/hadith1.jpg" alt="فضل الصدقة">
+        <h3>حديث نبوي: فضل الصدقة</h3>
+        <p>عن النبي ﷺ: "ما نقصت صدقة من مال..." — نص مختصر.</p>
+        <a href="articles.html">اقرأ المزيد</a>
+      </div>
+      <div class="card">
+        <img src="images/story1.jpg" alt="موقف النبي ﷺ">
+        <h3>موقف النبي ﷺ مع الصحابة</h3>
+        <p>قصة قصيرة تشرح الصبر والتعاون.</p>
+        <a href="articles.html">اقرأ المزيد</a>
+      </div>
+      <div class="card">
+        <img src="images/hadith2.jpg" alt="حسن الخلق">
+        <h3>حديث نبوي: حسن الخلق</h3>
+        <p>عن النبي ﷺ: "إنما بعثت لأتمم مكارم الأخلاق".</p>
+        <a href="articles.html">اقرأ المزيد</a>
+      </div>
+    </div>
+
+    <!-- البث المباشر المصغر -->
+    <h2>البث المباشر</h2>
+      <div class="video-container">
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/8oGGMsCqXxE" 
+          title="البث المباشر" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    <!-- الأقسام المميزة -->
+    <div class="features">
+      <div class="feature-card">
+        <h3>القرآن الكريم</h3>
+        <p>تصفح السور مع التفسير المبسط والمفيد.</p>
+      </div>
+      <div class="feature-card">
+        <h3>المقالات والأحاديث</h3>
+        <p>اطّلع على المقالات والأحاديث التي تلهم حياتك اليومية.</p>
+      </div>
+      <div class="feature-card">
+        <h3>التعليقات والتفاعل</h3>
+        <p>شارك برأيك وتعليقاتك لتكون جزءًا من مجتمع الموعظة.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
     </section>
 
-    <section class="latest">
-      <h3>آخر الإضافات</h3>
-      <ul id="latest-list">
-        <!-- سيتم ملؤه بواسطة script2.js -->
-      </ul>
-    </section>
+    
 
     <section class="about">
-      <h3>عن المشروع</h3>
-      <p>هذا قالب بسيط قابِل للتعديل، مهيأ للنشر على استضافة ثابتة (مثل GitHub Pages, Netlify, Vercel). يحتوي ربطًا بواجهة آيات مجانية لعرض سور القرآن نصّياً.</p>
+      <h3>عن المدونة</h3>
+      <p> , , . يحتوي ربطًا بواجهة آيات مجانية لعرض سور القرآن نصّياً.</p>
     </section>
     
-    <section id="home" class="hero">
-    <h1>بسم الله الرحمن الرحيم</h1>
-    <p>استمع إلى القرآن الكريم مباشرًا أو من السور المسجلة</p>
-    <button onclick="document.getElementById('live').scrollIntoView({behavior:'smooth'})">اذهب للبث المباشر</button>
-  </section>
+    
   </main>
 
   <footer class="site-footer">
@@ -77,5 +126,3 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-
