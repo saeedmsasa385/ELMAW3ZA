@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الموعظة — مدونة إسلامية</title>
+  <meta name="description" content="الموعظة — مدونة اسلامية تحتوي القرآن الكريم، الأحاديث، ومواقف النبي ﷺ مع الصحابة." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+      <link rel="icon" href="c:\Users\سعيد\Downloads\Similar PNG - Download 250K free PNG images with transparent background in best resolution_.jpg" type="image/png">
+
+  <meta name="theme-color" content="#A21C1C" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">الموعظة</h1>
+      <nav>
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="quran.html">القرآن الكريم</a>
+        <a href="articles.html">المقالات & الأحاديث</a>
+        <a href="contact.html">اتصل بنا</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero">
+      <h2>مرحبا بك في الموعظة</h2>
+      <p>مدونة إسلامية نصّية تركز على القرآن الكريم، الأحاديث، ومواقف النبي ﷺ مع الصحابة — تصميم بسيط وسرعة في التحميل.</p>
+      <div class="cta-row">
+        <a class="btn" href="quran.html">الذهاب إلى القرآن</a>
+        <a class="btn btn-outline" href="articles.html">المقالات والأحاديث</a>
+      </div>
+    </section>
+
+    <section class="latest">
+      <h3>آخر الإضافات</h3>
+      <ul id="latest-list">
+        <!-- سيتم ملؤه بواسطة script2.js -->
+      </ul>
+    </section>
+
+    <section class="about">
+      <h3>عن المشروع</h3>
+      <p>هذا قالب بسيط قابِل للتعديل، مهيأ للنشر على استضافة ثابتة (مثل GitHub Pages, Netlify, Vercel). يحتوي ربطًا بواجهة آيات مجانية لعرض سور القرآن نصّياً.</p>
+    </section>
+    
+    <section id="home" class="hero">
+    <h1>بسم الله الرحمن الرحيم</h1>
+    <p>استمع إلى القرآن الكريم مباشرًا أو من السور المسجلة</p>
+    <button onclick="document.getElementById('live').scrollIntoView({behavior:'smooth'})">اذهب للبث المباشر</button>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>الموعظة © <span id="year"></span> — جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
