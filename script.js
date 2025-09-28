@@ -173,7 +173,7 @@ function escapeHtml(str){
   if(!str) return '';
   return str.replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; });
 }
-.// محتوى المقالات والأحاديث الكامل
+// محتوى المقالات والأحاديث الكامل
 const articlesContent = {
   hadith1: `
     <h2>حديث نبوي: فضل الصدقة</h2>
