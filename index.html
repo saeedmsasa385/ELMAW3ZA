@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
       <link rel="icon" href="c:\Users\سعيد\Downloads\Similar PNG - Download 250K free PNG images with transparent background in best resolution_.jpg" type="image/png">
+      <!-- يمنع تحميل أي محتوى خارجي غير من نفس موقعك -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
+
+<!-- يمنع تشغيل الموقع داخل iframe (ضد هجمات clickjacking) -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+<!-- يمنع المتصفح من محاولة تخمين نوع الملفات -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- يجبر المتصفح على استخدام HTTPS دائمًا -->
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 
   <meta name="theme-color" content="#A21C1C" />
 </head>
@@ -65,3 +76,4 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
