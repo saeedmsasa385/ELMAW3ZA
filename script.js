@@ -173,3 +173,84 @@ function escapeHtml(str){
   if(!str) return '';
   return str.replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; });
 }
+.// محتوى المقالات والأحاديث الكامل
+const articlesContent = {
+  hadith1: `
+    <h2>حديث نبوي: فضل الصدقة</h2>
+    <p>عن النبي ﷺ: "ما نقصت صدقة من مال..." — مثال نصي كامل للحديث مع المصدر.</p>
+  `,
+  hadith2: `
+    <h2>حديث نبوي: حسن الخلق</h2>
+    <p>عن النبي ﷺ: "إنما بعثت لأتمم مكارم الأخلاق" — مثال نصي كامل.</p>
+  `,
+  story1: `
+    <h2>موقف النبي ﷺ مع الصحابة: الصبر</h2>
+    <p>قصة قصيرة تشرح الصبر من مواقف النبي ﷺ مع الصحابة.</p>
+  `,
+  story2: `
+    <h2>موقف النبي ﷺ مع الصحابة: التعاون</h2>
+    <p>قصة قصيرة تشرح خلق التعاون بين الصحابة ﷺ.</p>
+  `
+};
+
+// --- العناصر ---
+const modal = document.getElementById('article-modal');
+const modalContent = document.getElementById('modal-content');
+const closeModalBtn = document.getElementById('close-article');
+const readMoreLinks = document.querySelectorAll('.read-more');
+
+const searchInput = document.getElementById('article-search');
+const articlesList = document.getElementById('articles-list');
+
+const commentForm = document.getElementById('comment-form');
+const commentName = document.getElementById('comment-name');
+const commentText = document.getElementById('comment-text');
+const commentsList = document.getElementById('comments-list');
+
+// --- فتح الـModal عند الضغط على "اقرأ المزيد" ---
+readMoreLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const contentKey = link.dataset.content;
+    modalContent.innerHTML = articlesContent[contentKey] || '<p>المحتوى غير متوفر.</p>';
+    modal.classList.remove('hidden');
+  });
+});
+
+// --- إغلاق الـModal ---
+closeModalBtn.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+// إغلاق عند الضغط خارج الـmodal-body
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});
+
+// --- البحث في المقالات ---
+searchInput.addEventListener('input', () => {
+  const filter = searchInput.value.toLowerCase();
+  const articles = articlesList.querySelectorAll('.card');
+  articles.forEach(article => {
+    const text = article.textContent.toLowerCase();
+    article.style.display = text.includes(filter) ? '' : 'none';
+  });
+});
+
+// --- إضافة التعليقات ---
+commentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = commentName.value.trim() || 'زائر';
+  const text = commentText.value.trim();
+  if (!text) return;
+
+  const commentItem = document.createElement('div');
+  commentItem.classList.add('comment');
+  commentItem.innerHTML = `<strong>${name}</strong>: <p>${text}</p>`;
+
+  commentsList.appendChild(commentItem);
+  commentForm.reset();
+});
+
+
