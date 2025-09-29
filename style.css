@@ -1,4 +1,4 @@
-root{
+:root{
   --accent:#A21C1C; /* لون إسلامي دافئ */
   --bg:#fff;
   --muted:#666;
@@ -158,4 +158,5 @@ body{
 
 /* Animation */
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
 
