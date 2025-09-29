@@ -1,8 +1,8 @@
-:root{
+root{
   --accent:#A21C1C; /* لون إسلامي دافئ */
   --bg:#fff;
   --muted:#666;
-  --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --card-shadow: 0 30px 20px rgba(0,0,0,0.06);
   font-family: 'Cairo', sans-serif;
 }
 
@@ -73,6 +73,7 @@ body{
   color: #f8f6f6;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+
 .hero{padding:28px;background:linear-gradient(90deg, rgba(162,28,28,0.05), transparent);border-radius:10px;margin-bottom:18px}
 .hero h2{margin:0 0 6px;font-size:28px}
 .hero p{margin:0 0 12px;color:var(--muted)}
@@ -157,7 +158,4 @@ body{
 
 /* Animation */
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
-
-
 
