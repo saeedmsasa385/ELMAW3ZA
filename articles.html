@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
   <title>المقالات والأحاديث — الموعظة</title>
   <meta name="description" content="مقالات، أحاديث ومواقف النبي ﷺ مع الصحابة — محتوى نصي يزداد باستمرار.">
   <link rel="stylesheet" href="style.css" />
-      <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="c:\Users\سعيد\Downloads\Similar PNG - Download 250K free PNG images with transparent background in best resolution_.jpg" type="jpg/png">
-
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header class="site-header">
@@ -24,32 +22,47 @@
         <a href="live.html" class="nav-item active">البث المباشر</a>
         <a href="contact.html" class="nav-item">اتصل بنا</a>
       </nav>
+
     </div>
   </header>
 
   <main class="container main">
     <section>
       <h2>المقالات والأحاديث</h2>
+      
+      <!-- مربع البحث -->
       <div class="search-row">
         <input id="article-search" placeholder="ابحث في المقالات والأحاديث..." />
       </div>
 
+      <!-- قائمة المقالات والأحاديث -->
       <div id="articles-list" class="articles-list">
-        <!-- عينات مقالات/أحاديث -->
         <article class="card">
           <h3>حديث نبوي: فضل الصدقة</h3>
-          <p>عن النبي ﷺ: "ما نقصت صدقة من مال..." — (مثال نصي). يمكنك إضافة نص الحديث كاملاً ومصدره.</p>
+          <p>عن النبي ﷺ: "ما نقصت صدقة من مال..." .   .</p>
           <a class="read-more" data-content="hadith1">اقرأ المزيد</a>
         </article>
 
         <article class="card">
-          <h3>موقف النبي مع الصحابة: مثال</h3>
-          <p>قصة قصيرة عن موقف النبي ﷺ مع أحد الصحابة تشرح خلقًا أو عبرة.</p>
+          <h3>حديث نبوي: حسن الخلق</h3>
+          <p>عن النبي ﷺ: "إنما بعثت لأتمم مكارم الأخلاق"  .</p>
+          <a class="read-more" data-content="hadith2">اقرأ المزيد</a>
+        </article>
+
+        <article class="card">
+          <h3>موقف النبي مع الصحابة: الصبر</h3>
+          <p>قصة قصيرة عن موقف النبي ﷺ مع أحد الصحابة تشرح الصبر.</p>
           <a class="read-more" data-content="story1">اقرأ المزيد</a>
         </article>
 
+        <article class="card">
+          <h3>موقف النبي مع الصحابة: التعاون</h3>
+          <p>قصة قصيرة تشرح خلق التعاون بين الصحابة ﷺ.</p>
+          <a class="read-more" data-content="story2">اقرأ المزيد</a>
+        </article>
       </div>
 
+      <!-- نافذة منبثقة (Modal) -->
       <section id="article-modal" class="modal hidden">
         <div class="modal-body">
           <button class="close-modal" id="close-article">×</button>
@@ -57,6 +70,9 @@
         </div>
       </section>
 
+      
+
+      <!-- قسم التعليقات -->
       <section class="comments-section">
         <h3>التعليقات</h3>
         <form id="comment-form">
@@ -75,8 +91,11 @@
     </div>
   </footer>
 
+  <!-- ربط الجافاسكريبت -->
   <script src="script.js"></script>
-  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
